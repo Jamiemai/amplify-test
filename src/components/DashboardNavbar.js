@@ -31,7 +31,7 @@ const DashboardNavbar = ({ onMobileNavOpen, ...rest }) => {
           <IconButton color="inherit">
             <Badge
               badgeContent={notifications.length}
-              color="primary"
+              // color="primary"
               variant="dot"
             >
               <NotificationsIcon />

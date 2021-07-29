@@ -13,8 +13,8 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  TableSortLabel,
-  Tooltip
+  // TableSortLabel,
+  // Tooltip
 } from '@material-ui/core';
 // import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
@@ -83,7 +83,7 @@ const orders = [
 
 const LatestOrders = (props) => (
   <Card {...props}>
-    <CardHeader title="Latest Orders" />
+    <CardHeader title="Device List" />
     <Divider />
     <PerfectScrollbar>
       <Box sx={{ minWidth: 800 }}>
@@ -91,26 +91,16 @@ const LatestOrders = (props) => (
           <TableHead>
             <TableRow>
               <TableCell>
-                Order Ref
+                Mac Address
               </TableCell>
               <TableCell>
-                Customer
-              </TableCell>
-              <TableCell sortDirection="desc">
-                <Tooltip
-                  enterDelay={300}
-                  title="Sort"
-                >
-                  <TableSortLabel
-                    active
-                    direction="desc"
-                  >
-                    Date
-                  </TableSortLabel>
-                </Tooltip>
+                Name
               </TableCell>
               <TableCell>
-                Status
+                Tag
+              </TableCell>
+              <TableCell>
+                Action
               </TableCell>
             </TableRow>
           </TableHead>

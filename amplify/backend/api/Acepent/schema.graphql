@@ -1,0 +1,17 @@
+type Device @model @auth(rules: [{allow: public}]) @key(name: "byUser", fields: ["userID"]) {
+  id: ID!
+  mac_address: String
+  name: String
+  tags: String
+  userID: ID
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  company: String
+  email: AWSEmail
+  avatar: AWSURL
+  Devices: [Device] @connection(keyName: "byUser", fields: ["id"])
+}
+ 
