@@ -12,7 +12,7 @@ import products from 'src/__mocks__/products';
 const ProductList = () => (
   <>
     <Helmet>
-      <title>Products | Acepent</title>
+      <title> Acepent</title>
     </Helmet>
     <Box
       sx={{
