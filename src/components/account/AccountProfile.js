@@ -111,14 +111,14 @@ const AccountProfile = (props) => {
             width: 100
           }}
         />
-          <input
+          {/* <input
             accept="image/*"
             style = {{ display: 'none'}}
             id="contained-button-file"
             multiple
             type="file"
             onChange={handleOnChange}
-            />
+            /> */}
         <Typography
           color="textPrimary"
           gutterBottom
