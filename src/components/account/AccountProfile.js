@@ -9,6 +9,7 @@ import {
   Divider,
   Typography
 } from '@material-ui/core';
+import React, { createRef, useState } from 'react';
 
 const user = {
   avatar: '/static/images/avatars/avatar_6.png',
@@ -19,7 +20,80 @@ const user = {
   timezone: 'GTM-7'
 };
 
-const AccountProfile = (props) => (
+// const Account = () => (
+// const inputFileRef = createRef(null);
+// const [image, _setImage] = useState(null);
+
+// const cleanup = () => {
+//   URL.revokeObjectURL(image);
+//   inputFileRef.current.value = null;
+// };
+
+// const setImage = (newImage) => {
+//   if (image) {
+//     cleanup();
+//   }
+//   _setImage(newImage);
+// };
+
+// const handleOnChange = (event) => {
+//   const newImage = event.target?.files?.[0];
+
+//   if (newImage) {
+//     setImage(URL.createObjectURL(newImage));
+//   }
+// };
+
+//   /**
+//    *
+//    * @param {React.MouseEvent<HTMLButtonElement, MouseEvent>} event
+//    */
+//    const handleClick = (event) => {
+//     if (image) {
+//       event.preventDefault();
+//       setImage(null);
+//     }
+//   };
+
+
+const AccountProfile = (props) => {
+
+  const inputFileRef = createRef(null);
+  const [image, _setImage] = useState(null);
+
+  const cleanup = () => {
+    URL.revokeObjectURL(image);
+    inputFileRef.current.value = null;
+  };
+
+  const setImage = (newImage) => {
+    if (image) {
+      cleanup();
+    }
+    _setImage(newImage);
+  };
+
+  const handleOnChange = (event) => {
+  const newImage = event.target?.files?.[0];
+
+  if (newImage) {
+    setImage(URL.createObjectURL(newImage));
+  }
+  };
+
+    /**
+   *
+   * @param {React.MouseEvent<HTMLButtonElement, MouseEvent>} event
+   */
+   const handleClick = (event) => {
+    if (image) {
+      event.preventDefault();
+      setImage(null);
+    }
+  };
+
+
+  return (
   <Card {...props}>
     <CardContent>
       <Box
@@ -30,12 +104,21 @@ const AccountProfile = (props) => (
         }}
       >
         <Avatar
-          src={user.avatar}
+        
+           src={user.avatar}
           sx={{
             height: 100,
             width: 100
           }}
         />
+          <input
+            accept="image/*"
+            style = {{ display: 'none'}}
+            id="contained-button-file"
+            multiple
+            type="file"
+            onChange={handleOnChange}
+            />
         <Typography
           color="textPrimary"
           gutterBottom
@@ -63,11 +146,13 @@ const AccountProfile = (props) => (
         color="primary"
         fullWidth
         variant="text"
+        onChange={handleOnChange}
       >
         Upload picture
       </Button>
     </CardActions>
   </Card>
-);
+  )
+};
 
 export default AccountProfile;

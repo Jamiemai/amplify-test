@@ -4,6 +4,9 @@ import CustomerListResults from 'src/components/customer/CustomerListResults';
 import CustomerListToolbar from 'src/components/customer/CustomerListToolbar';
 import customers from 'src/__mocks__/customers';
 
+// import { DataStore } from '@aws-amplify/datastore';
+// import { Device } from '../models';
+
 const CustomerList = () => (
   <>
     <Helmet>

@@ -1,15 +1,15 @@
 import { Link as RouterLink } from 'react-router-dom';
 import { AppBar, Toolbar } from '@material-ui/core';
-import Logo from './Logo';
+// import Logo from './Logo';
 
 const MainNavbar = (props) => (
-  <AppBar
+  <AppBar style={{ background: '#3cb043' }}
     elevation={0}
     {...props}
   >
     <Toolbar sx={{ height: 64 }}>
       <RouterLink to="/">
-        <Logo />
+        {/* <Logo /> */}
       </RouterLink>
     </Toolbar>
   </AppBar>

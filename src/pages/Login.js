@@ -20,7 +20,7 @@ const Login = () => {
   return (
     <>
       <Helmet>
-        <title>Login | Material Kit</title>
+        <title>Login | Acepent</title>
       </Helmet>
       <Box
         sx={{
@@ -55,69 +55,12 @@ const Login = () => {
               values
             }) => (
               <form onSubmit={handleSubmit}>
-                <Box sx={{ mb: 3 }}>
+                <Box sx={{ mb: 3 }} alignSelf="center"  >
                   <Typography
                     color="textPrimary"
                     variant="h2"
                   >
                     Sign in
-                  </Typography>
-                  <Typography
-                    color="textSecondary"
-                    gutterBottom
-                    variant="body2"
-                  >
-                    Sign in on the internal platform
-                  </Typography>
-                </Box>
-                <Grid
-                  container
-                  spacing={3}
-                >
-                  <Grid
-                    item
-                    xs={12}
-                    md={6}
-                  >
-                    <Button
-                      color="primary"
-                      fullWidth
-                      startIcon={<FacebookIcon />}
-                      onClick={handleSubmit}
-                      size="large"
-                      variant="contained"
-                    >
-                      Login with Facebook
-                    </Button>
-                  </Grid>
-                  <Grid
-                    item
-                    xs={12}
-                    md={6}
-                  >
-                    <Button
-                      fullWidth
-                      startIcon={<GoogleIcon />}
-                      onClick={handleSubmit}
-                      size="large"
-                      variant="contained"
-                    >
-                      Login with Google
-                    </Button>
-                  </Grid>
-                </Grid>
-                <Box
-                  sx={{
-                    pb: 1,
-                    pt: 3
-                  }}
-                >
-                  <Typography
-                    align="center"
-                    color="textSecondary"
-                    variant="body1"
-                  >
-                    or login with email address
                   </Typography>
                 </Box>
                 <TextField
@@ -148,7 +91,7 @@ const Login = () => {
                 />
                 <Box sx={{ py: 2 }}>
                   <Button
-                    color="primary"
+                   style={{ background: '#3cb043' }}
                     disabled={isSubmitting}
                     fullWidth
                     size="large"
@@ -168,6 +111,7 @@ const Login = () => {
                     component={RouterLink}
                     to="/register"
                     variant="h6"
+                    style={{ color: '#3cb043' }}
                   >
                     Sign up
                   </Link>

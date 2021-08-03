@@ -151,6 +151,7 @@ const Register = () => {
                       to="#"
                       underline="always"
                       variant="h6"
+                      style={{ color: '#3cb043' }}
                     >
                       Terms and Conditions
                     </Link>
@@ -169,6 +170,7 @@ const Register = () => {
                     size="large"
                     type="submit"
                     variant="contained"
+                    style={{ background: '#3cb043' }}
                   >
                     Sign up now
                   </Button>
@@ -183,6 +185,7 @@ const Register = () => {
                     component={RouterLink}
                     to="/login"
                     variant="h6"
+                    style={{ color: '#3cb043' }}
                   >
                     Sign in
                   </Link>
