@@ -143,7 +143,7 @@ const AccountProfile = (props) => {
     <Divider />
     <CardActions>
       <Button
-        color="primary"
+        style={{ color: '#377E7F' }}
         fullWidth
         variant="text"
         onChange={handleOnChange}

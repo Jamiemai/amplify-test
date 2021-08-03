@@ -164,7 +164,7 @@ const AccountProfileDetails = (props) => {
           </Grid>
         </CardContent>
         <Divider />
-        <Box
+        <Box 
           sx={{
             display: 'flex',
             justifyContent: 'flex-end',
@@ -172,6 +172,7 @@ const AccountProfileDetails = (props) => {
           }}
         >
           <Button
+            style={{ background: '#377E7F' }}
             color="primary"
             variant="contained"
           >
