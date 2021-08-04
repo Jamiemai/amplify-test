@@ -13,6 +13,8 @@ import NativeSelect from '@material-ui/core/NativeSelect';
 import InputLabel from '@material-ui/core/InputLabel';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
 import {
   Box,
@@ -130,11 +132,28 @@ const handleClose = () => {
 
     return (
 <React.Fragment>
+  <Grid justifyContent="flex-end" container >
+  <Grid
+  item 
+  xs={6} sm={1}
+  style={{ margin:'15px'}}
+  >
+    <IconButton aria-label="add" style={{ background: '#377E7F', color: '#FFFFFF' }}>
+        <AddIcon onClick={handleClickOpen} />
+    </IconButton>
+  </Grid>
+  <Grid
+  item 
+  >
+  </Grid>
+  </Grid>
   <Card {...props}>
-    <CardHeader title="Device List" />
+    <CardHeader title="Device List" 
+    />
     <Divider />
     <PerfectScrollbar>
-      <Box sx={{ minWidth: 800 }}>
+      <Box> 
+      {/* sx={{ minWidth: 200 }} */}
         <Table>
           <TableHead>
             <TableRow>
@@ -142,10 +161,10 @@ const handleClose = () => {
                 Mac Address
               </TableCell>
               <TableCell>
-                Name
+                Label
               </TableCell>
               <TableCell>
-                Tag
+                Tags
               </TableCell>
               <TableCell>
                 Action
@@ -169,9 +188,6 @@ const handleClose = () => {
                   {order.tag}
                 </TableCell>
                 <TableCell>
-                    <IconButton aria-label="add">
-                        <AddIcon onClick={handleClickOpen} />
-                    </IconButton>
                     <IconButton aria-label="edit">
                         <EditIcon  onClick={handleClickOpenEdit}/>
                     </IconButton>

@@ -23,7 +23,7 @@ const TrafficByDevice = (props) => {
         backgroundColor: [
           colors.indigo[500],
           colors.red[600],
-          colors.orange[600]
+          colors.orange[500]
         ],
         borderWidth: 8,
         borderColor: colors.common.white,
@@ -42,17 +42,6 @@ const TrafficByDevice = (props) => {
     },
     maintainAspectRatio: false,
     responsive: true,
-    tooltips: {
-      backgroundColor: theme.palette.background.paper,
-      bodyFontColor: theme.palette.text.secondary,
-      borderColor: theme.palette.divider,
-      borderWidth: 1,
-      enabled: true,
-      footerFontColor: theme.palette.text.secondary,
-      intersect: false,
-      mode: 'index',
-      titleFontColor: theme.palette.text.primary
-    }
   };
 
   const devices = [
@@ -70,7 +59,7 @@ const TrafficByDevice = (props) => {
     },
     {
       title: 'Mobile',
-      value: 23,
+      value: 22,
       icon: PhoneIcon,
       color: colors.orange[600]
     }
